@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Assignment</title>
+    <!-- Include PyScript's CSS and JavaScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1>PyScript Demo</h1>
+
+    <!-- Input field -->
+    <label for="operandOne">Enter a number:</label>
+    <input type="text" id="operandOne">
+    <br><br>
+
+    <!-- Button -->
+    <button onclick="show_input()">Show Input</button>
+    <br><br>
+
+    <!-- Div to display the result here -->
+    <div id="total"></div>
+
+    <!-- This is PyScript Code  -->
+    <py-script>
+        # Function to get input and display it
+        def show_input():
+            # Get the value from the input box
+            input_box = Element("operandOne")
+            operand_one = float(input_box.value)
+
+            # Display the value in the 'total' div
+            result = Element("total")
+            result.write(f"Hello! The input says: {operand_one}")
+    </py-script>
+</body>
+</html>
